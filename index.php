@@ -1,33 +1,3 @@
-<?php
-  // Arithmetic operators
-  // + - * / ** %
-  $x = 5;
-  $y = 3;
-  $z = null;
-
-  // $z = $x + $y;
-  // $z = $x - $y;
-  // $z = $x * $y;
-  // $z = $x / $y;
-  // $z = $x ** $y;
-  // $z = $x % $y;
-  // echo "Z: {$z} <br>";
-
-  // Increment/Decrement operators
-  $counter = 0;
-  // $counter --;
-  // echo $counter;
-
-  // Operator precedence
-  // ()
-  // **
-  // * / %
-  // + -
-  $total = 1 + 2 - 3 * 4 / 5 ** 6;
-  // echo $total;
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,10 +6,37 @@
   <title>Document</title>
 </head>
 <body>
-  <br>
-  <!-- <button>
-    Order Shawarma
-  </button> -->
+  <!-- Resturant Project very sample -->
+   <form action="index.php" method="post">
+
+    <div>
+      <label for="quantity">Quantity: </label>
+      <input type="number" id="quantity" name="Quantity">
+    </div><br>
+
+    <input type="submit" value="Total">
+
+   </form>
+  
+ 
   
 </body>
 </html>
+
+<?php
+
+  // GET AND POST
+  // Resturant Project very sample
+  $food = "Shawarma";
+  $price = 2.45;
+  $quantity = $_POST["Quantity"];
+  $total = null;
+
+  $total = $price * $quantity;
+
+  echo "You have ordered {$quantity} x {$food}s <br>";
+  echo "Your total price is: \${$total}";
+
+  
+
+?>
