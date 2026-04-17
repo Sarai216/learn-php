@@ -6,35 +6,68 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- Lesson 6 If statment -->
-  <form action="index.php" method="post">
+  <!-- First Example -->
+  <!-- <form action="index.php" method="post">
     <div>
-      <label for="hour">Work Hours in This Week</label>
-      <input type="text" id="hour" name="workHours">
+      <label for="temp">Tempreature: </label>
+      <input type="text" name="tempreature" id="temp">
     </div><br>
 
-    <input type="submit" value="Money">
-  </form>
+    <input type="submit" value="Wethear">
+  </form> -->
 
+  <!-- --------------------------------------------------- -->
+
+  <!-- Second Example -->
+  <form action="index.php" method="post">
+    <div>
+      <label for="age">Age : </label>
+      <input type="number" id="age" name="ageOfVote">
+    </div><br>
+
+    <input type="submit" value="Can Vote? ">
+    <hr><br>
+  </form>
 
 </body>
 </html>
 
 <?php
-  $hours = 40;
-  $hoursWorked = $_POST["workHours"];
-  $rate = 15;
-  $weekly_pay = null;
+  // Logical Operators
+  // AND && 
+  // OR ||
+  // NOT !
 
-  if($hoursWorked < 0)
-    {$weekly_pay = 0;}
-  elseif($hoursWorked <= $hours){
-    $weekly_pay = $hoursWorked * $rate ;
+  // First Example 
+  // $temp = $_POST["tempreature"];
+
+  // if($temp <= 30  && $temp >=20)
+  //   {echo "The Wethear is normal";}
+  // elseif($temp > 30)
+  //   echo "The Wethear is hot";
+  // else{
+  //   echo "The Wethear iS cold";
+  // }
+  // -----------------------------------------------------------
+
+  // Second Example Nested If 
+  $age = $_POST["ageOfVote"];
+  $ageVote = 18;
+  $citizen = true;
+  $parent_agree = false;
+
+  if($age >= $ageVote && $citizen)
+    echo "He/She Can not Vote";
+  elseif ($age >= 16 && $citizen){
+    if($parent_agree)
+      echo "He/She Can Vote";
+    else{
+      echo "He/She Can Not Vote";
+    }
   }
-  else{
-    $weekly_pay = ($hours * $rate ) + (($hoursWorked - $hours) * ($rate * 1.5));
-  }
+  else
+    echo "He/She Can Vote";
+
   
-  echo "Total Money: \${$weekly_pay}";
 
 ?>
