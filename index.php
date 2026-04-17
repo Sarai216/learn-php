@@ -6,36 +6,87 @@
   <title>Document</title>
 </head>
 <body>
-  <!-- Resturant Project very sample -->
-   <form action="index.php" method="post">
+ <!-- Math Functions First Example-->
+  <!-- <form action="index.php" method="post">
+    <div>
+      <label for="num1">First Number: </label>
+      <input type="text" id="num1" name="number1"> 
+    </div> <br>
 
     <div>
-      <label for="quantity">Quantity: </label>
-      <input type="number" id="quantity" name="Quantity">
+      <label for="num2">Number 2:</label>
+      <input type="text" id="num2" name="number2">
     </div><br>
 
-    <input type="submit" value="Total">
+    <div>
+      <label for="num3">Number 3: </label>
+      <input type="text" id="num3" name="number3">
+    </div><br>
 
+    <input type="submit" value="Math">
+  </form> -->
+  <!-- -------------------------------------------------------------------------------------- -->
+
+  <!-- Math Funcations Second Example Circle -->
+   <form action="index.php" method="post">
+    <div>
+      <label for="r">Radius: </label>
+      <input type="text" id="r" name="radius">
+    </div><br>
+
+    <input type="submit" value="calculate">
+  
    </form>
-  
- 
-  
+   <hr><br>
+
 </body>
 </html>
 
 <?php
+  // Math Function
 
-  // GET AND POST
-  // Resturant Project very sample
-  $food = "Shawarma";
-  $price = 2.45;
-  $quantity = $_POST["Quantity"];
-  $total = null;
+  // $num1 = $_POST["number1"];
+  // $num2 = $_POST["number2"];
+  // $num3 = $_POST["number3"];
+  // $result = null;
 
-  $total = $price * $quantity;
+  // // $num1 = abs($num1);
+  // // $num1 = round($num1);
+  // // $num1 = floor($num1);
+  // // $num1 = ceil($num1);
+  // // $num1 = sqrt($num1);
+  // // $result = pow($num1, $num2);
+  // // $result = max($num1, $num2, $num3);
+  // // $result = min($num1, $num2, $num3);
+  // // $result = pi();
+  // // $result = rand(2,80);
 
-  echo "You have ordered {$quantity} x {$food}s <br>";
-  echo "Your total price is: \${$total}";
+  // echo $result;
+  // -------------------------------------------------------------------
+
+  
+  // Math Funcations Second Example Circle
+  $radius = $_POST["radius"];
+  $circumference = null;
+  $area = null;
+  $volume = null;
+
+  // Circmference 
+  $circumference = round(2 * pi() * $radius, 2) ;
+  echo "Circumference = {$circumference} cm <br>";
+
+  // Area
+  $area = round(pi() * pow($radius , 2), 2);
+  echo "Area = {$area} cm^2 <br>";
+
+  // Volume
+  $volume = round((4/3) * pi() * pow($radius, 3) , 2);
+  echo "Volume = {$volume} cm^3 <br>";
+
+
+  
+
+
 
   
 
