@@ -1,33 +1,3 @@
-<?php
-  // Arithmetic operators
-  // + - * / ** %
-  $x = 5;
-  $y = 3;
-  $z = null;
-
-  // $z = $x + $y;
-  // $z = $x - $y;
-  // $z = $x * $y;
-  // $z = $x / $y;
-  // $z = $x ** $y;
-  // $z = $x % $y;
-  // echo "Z: {$z} <br>";
-
-  // Increment/Decrement operators
-  $counter = 0;
-  // $counter --;
-  // echo $counter;
-
-  // Operator precedence
-  // ()
-  // **
-  // * / %
-  // + -
-  $total = 1 + 2 - 3 * 4 / 5 ** 6;
-  // echo $total;
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,10 +6,27 @@
   <title>Document</title>
 </head>
 <body>
-  <br>
-  <!-- <button>
-    Order Shawarma
-  </button> -->
+  <form action="index.php" method="post">
+    <div>
+      <label for="userName">UserName</label>
+      <input type="text" name="user-name" id="userName">
+    </div><br>
+
+    <div>
+      <label for="passWord">Pass Word:</label>
+      <input type="password" name="pass-word" id="passWord">
+    </div><br>
+
+    <input type="submit" name="submit" value="Log in">
+  </form>
+ 
   
 </body>
 </html>
+
+<?php
+
+  // GET AND POST
+  echo "Name: {$_POST['user-name']} <br>";
+  echo "PassWord: {$_POST['pass-word']} <br>";
+?>
