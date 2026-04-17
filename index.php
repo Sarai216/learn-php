@@ -1,39 +1,31 @@
 <?php
-  // Variable
-  // string
-  $name = 'Sara Mohammed';
-  $food = 'shawarma';
-  $email = 'sara13@gmail.com';
+  // Arithmetic operators
+  // + - * / ** %
+  $x = 5;
+  $y = 3;
+  $z = null;
 
-  // int
-  $age = 21;
-  $users = 3;
-  $quantity = 10;
+  // $z = $x + $y;
+  // $z = $x - $y;
+  // $z = $x * $y;
+  // $z = $x / $y;
+  // $z = $x ** $y;
+  // $z = $x % $y;
+  // echo "Z: {$z} <br>";
 
-  // float
-  $gpa = 3.8;
-  $price = 2.45;
-  $tax_rate = 5.1;
-  
-  // boolean
-  $employed = true;
-  $online = true;
+  // Increment/Decrement operators
+  $counter = 0;
+  // $counter --;
+  // echo $counter;
 
-  $total = $quantity * $price ;
+  // Operator precedence
+  // ()
+  // **
+  // * / %
+  // + -
+  $total = 1 + 2 - 3 * 4 / 5 ** 6;
+  // echo $total;
 
-  //message
-  echo "Hello {$name} <br>";
-  echo "You like {$food} <br>";
-  echo "Your email is {$email} <br>";
-  echo "You are {$age} Years old <br>";
-  echo "There are {$users} online <br>";
-  echo "You would like to buy {$quantity} itmes <br>";
-  echo "Your gpa is: {$gpa} <br>";
-  echo "Your {$food} is: \${$price} <br>";
-  echo "The sales tax rate is: {$tax_rate}% <br>";
-  echo "Online Status: {$online} <br> <hr>";
-  echo "Your have ordered {$quantity} x {food} <br>";
-  echo "Your total is:\${$total}";
 ?>
 
 <!DOCTYPE html>
@@ -45,9 +37,9 @@
 </head>
 <body>
   <br>
-  <button>
+  <!-- <button>
     Order Shawarma
-  </button>
+  </button> -->
   
 </body>
 </html>
