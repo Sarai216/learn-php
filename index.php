@@ -6,19 +6,18 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="index.php" method="post">
-    <div>
-      <label for="userName">UserName</label>
-      <input type="text" name="user-name" id="userName">
-    </div><br>
+  <!-- Resturant Project very sample -->
+   <form action="index.php" method="post">
 
     <div>
-      <label for="passWord">Pass Word:</label>
-      <input type="password" name="pass-word" id="passWord">
+      <label for="quantity">Quantity: </label>
+      <input type="number" id="quantity" name="Quantity">
     </div><br>
 
-    <input type="submit" name="submit" value="Log in">
-  </form>
+    <input type="submit" value="Total">
+
+   </form>
+  
  
   
 </body>
@@ -27,6 +26,17 @@
 <?php
 
   // GET AND POST
-  echo "Name: {$_POST['user-name']} <br>";
-  echo "PassWord: {$_POST['pass-word']} <br>";
+  // Resturant Project very sample
+  $food = "Shawarma";
+  $price = 2.45;
+  $quantity = $_POST["Quantity"];
+  $total = null;
+
+  $total = $price * $quantity;
+
+  echo "You have ordered {$quantity} x {$food}s <br>";
+  echo "Your total price is: \${$total}";
+
+  
+
 ?>
